@@ -1,6 +1,5 @@
 .planet-container {
     position: fixed; /* Use fixed to position relative to the viewport */
-    cursor: pointer;
     z-index: 100; /* Ensure it appears above other content */
     width: auto;
   }
@@ -9,6 +8,8 @@
     width: 100px; /* Adjust as needed */
     height: auto; /* Maintain aspect ratio */
     transition: transform 0.5s ease; /* Optional smooth transition */
+    will-change: transform; /* Hint to the browser for optimizing rendering */
+    cursor: pointer;
   }
   
   .fact-overlay {
@@ -36,6 +37,18 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
     position: relative; /* Position for the close button */
   }
+
+  /* Adjusting the styling of the list */
+.fact-box ul {
+    list-style-position: inside; /* Makes the bullets inside the list */
+    padding: 0; /* Removes padding */
+    margin: 0; /* Removes margin */
+  }
+  
+  .fact-box li {
+    margin: 5px 0; /* Adjust margin as needed to control spacing between items */
+    line-height: 1.2; /* Adjust line-height for better spacing if needed */
+  }
   
   .close-button {
     position: absolute;
@@ -48,6 +61,10 @@
     color: #000; /* Close button color */
   }
   
+  .fact-box h1 {
+    font-size: 2rem; /* Use rem for responsive sizing based on root font size */
+  }
+
   @keyframes fadeIn {
     from {
       opacity: 0; /* Start from fully transparent */
@@ -57,3 +74,14 @@
     }
   }
   
+  @keyframes fadeOut {
+    from {
+        opacity: 1; /* Start from fully opaque */
+    }
+    to {
+        opacity: 0; /* End at fully transparent */
+    }
+}
+.fade-out {
+    animation: fadeOut 1s ease forwards; /* Trigger the fadeOut animation */
+}
