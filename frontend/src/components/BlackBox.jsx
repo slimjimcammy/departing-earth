@@ -13,11 +13,13 @@ const BlackBox = ({ title, planetname, maintext }) => {
             <h1>{title}</h1>
             <h2>{planetname}</h2>
             <p>{maintext}</p>
-            <button onClick={handleButtonClick}>
+            <div className="ExploreButtonWrapper">
+            <button className='ExploreButton' onClick={handleButtonClick}>
                 Explore Exoplanet
             </button>
             {/* Conditionally render ExploreExoPlanet when the button is clicked */}
             {showExplore && <ExploreExoPlanet />}
+            </div>
         </div>
     );
 };

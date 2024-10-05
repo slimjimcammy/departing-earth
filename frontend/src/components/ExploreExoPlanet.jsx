@@ -17,6 +17,7 @@ const NumberDisplay = ({ number }) => {
 const ExploreExoPlanet = () => {
   const [inputNumber, setInputNumber] = useState('');
   const [submittedNumber, setSubmittedNumber] = useState(null);
+  const navigate = useNavigate(); // Call useNavigate to get navigate function
 
   // Handle the number input change
   const handleInputChange = (e) => {
@@ -31,7 +32,7 @@ const ExploreExoPlanet = () => {
     e.preventDefault();
     if (inputNumber) {
       setSubmittedNumber(Number(inputNumber));
-      navigate('/WormHole', { state: { submittedNumber: Number(inputNumber) } }); // Navigate to new page with state
+      navigate('/wormhole', { state: { submittedNumber: Number(inputNumber) } }); // Navigate to new page with state
     }
   };
 
@@ -39,17 +40,17 @@ const ExploreExoPlanet = () => {
   const handleRandomNumber = () => {
     const randomNumber = Math.floor(Math.random() * 5005) + 1;
     setSubmittedNumber(randomNumber);
-    navigate('/WormHole', { state: { submittedNumber: randomNumber } }); // Navigate to new page with state
+    navigate('/wormhole', { state: { submittedNumber: randomNumber } }); // Navigate to new page with state
   };
 
   return (
     <div className="ExoButtons">
-      <form onSubmit={handleSubmit}>
+      <form className="ExoForm" onSubmit={handleSubmit}>
         <input
           type="number"
           value={inputNumber}
           onChange={handleInputChange}
-          placeholder="Enter a number (1-5005)"
+          placeholder="Enter a num (1-5005)"
         />
         <button type="submit">Submit</button>
       </form>
