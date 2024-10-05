@@ -2,7 +2,8 @@
     margin: 0;
     padding: 30px;
     height: 85vh;
-    width: 35%;
+    min-width: 50%;
+    /* width: 550px; */
     background-color: rgb(65, 65, 65);
     color: white;
     border-radius: 15px;
@@ -30,6 +31,8 @@
 .BlackBoxMainContainer p {
     padding-top: 50px; 
 }
+
+
 
 @keyframes fadeIn {
     from {

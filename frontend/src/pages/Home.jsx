@@ -6,14 +6,20 @@ import ExploreExoPlanet from '../components/ExploreExoPlanet';
 
 const Home = () => {
 
+    const [isBlur, setIsBlur] = useState(true);
+
+    const changeBlur = () => {
+        setIsBlur(!isBlur);
+    }
+
     return (
-        <body>
-            <div className='BlurredImage'></div>
+        <>
+            <div className={isBlur ? "BlurredImage" : "notBlur"}></div>
             <div className='HomePage'>
                 <BlackBox title="WELCOME TO" planetname="EARTH"
-                    maintext="SUCKIN CRAZY ON BLACK STROKES" />
+                    maintext="SUCKIN CRAZY ON BLACK STROKES" blur={isBlur} changeBlur={changeBlur} />
             </div>
-        </body>
+        </>
     );
 };
 
