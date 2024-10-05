@@ -31,7 +31,7 @@ html, body {
     position: absolute;
     width: 30vw;
     height: 40vh;
-    background: radial-gradient(circle, rgba(0, 0, 0, 0.3), rgba(64, 64, 236, 0.5));
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.3), rgba(64, 64, 236, 0.7));
     border-radius: 50%;
     animation: expand 3s linear infinite;
     box-shadow: 0 0 10px rgba(0, 0, 255, 1), 0 0 30px rgba(0, 0, 255, 1);
@@ -45,9 +45,6 @@ html, body {
 .Wormhole:nth-child(4) { animation-delay: 1.5s; }
 .Wormhole:nth-child(5) { animation-delay: 2s; }
 .Wormhole:nth-child(6) { animation-delay: 2.5s; }
-.Wormhole:nth-child(7) { animation-delay: 3; }
-.Wormhole:nth-child(8) { animation-delay: 3.5s; }
-.Wormhole:nth-child(9) { animation-delay: 4s; }
 
 /* Text Overlay should be independent of .Wormhole */
 .TextOverlay {

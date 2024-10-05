@@ -10,9 +10,6 @@ const Wormhole = () => {
             <div className="Wormhole" />
             <div className="Wormhole" />
             <div className="Wormhole" />
-            <div className="Wormhole" />
-            <div className="Wormhole" />
-            <div className="Wormhole" /> 
             <div className="TextOverlay">
                 <h1>Traveling through the Wormhole</h1>
             </div>
