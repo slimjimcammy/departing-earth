@@ -16,9 +16,9 @@ def getStarData():
         response = requests.get(url)
         code = response.status_code
 
-        return jsonify(response.json()), 200 if code == 200 else error, code
+        return jsonify(response.json()) if code == 200 else error
     except requests.exceptions.RequestException as e:
-        return jsonify({"error": str(e)}), 500
+        return jsonify({"error": str(e)})
 
 
 
