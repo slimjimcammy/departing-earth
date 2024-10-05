@@ -1,3 +1,4 @@
 backend/env
-backend/requirements.txt
 *__pycache__
+backend/model/gifs
+backend/model/.quickdrawcache
