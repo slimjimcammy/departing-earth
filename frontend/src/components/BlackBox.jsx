@@ -9,7 +9,7 @@ const BlackBox = ({ title, planetname, maintext, onDrawConstellationClick, blur,
 
     // Function to toggle visibility of the ExploreExoPlanet component
     const handleButtonClick = () => {
-        setShowExplore(true);
+        setShowExplore(prevShowExplore => !prevShowExplore); // Toggle the value
     };
 
     // Function to hide BlackBox and show Draw Constellation button

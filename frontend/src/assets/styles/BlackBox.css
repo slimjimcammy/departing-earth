@@ -5,13 +5,14 @@
     min-width: 50%;
     /* width: 550px; */
     background-color: rgb(65, 65, 65);
+    background: linear-gradient(135deg, rgba(65, 65, 65, 0.9), rgba(25, 25, 25, 0.9)); /* Gradient effect */
     color: white;
-    border-radius: 15px;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     text-align: center;
     z-index: 10;
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5), inset 0 2px 10px rgba(0, 0, 0, 0.3); /* Outer and inner shadow */
 }
 
 .BlackBoxMainContainer h1 {

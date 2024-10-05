@@ -20,6 +20,9 @@ const FactsPage = () => {
           title="Welcome To"
           planetname={exoplanetData.name}
           maintext={`Click on the moons to see facts about ${exoplanetData.name}`}
+          onDrawConstellationClick={() => {}}
+          blur={true}
+          changeBlur={()=> {}}  
         />
       )}
       {exoplanetData && (
