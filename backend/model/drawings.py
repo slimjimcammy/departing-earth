@@ -4,18 +4,18 @@ from quickdraw import QuickDrawDataGroup
 qd = QuickDrawData()
 drawingNames = qd.drawing_names
 names = [
-    "Dragon",
-    "Angel",
-    "Sword",
-    "Castle",
-    "Crown",
-    "Dog",
-    "Teapot",
-    "Sea Turtle",
-    "Tornado",
-    "Whale",
-    "Flying Saucer",
-    "Lighthouse"
+    "dragon",
+    "angel",
+    "sword",
+    "castle",
+    "crown",
+    "dog",
+    "teapot",
+    "sea turtle",
+    "tornado",
+    "whale",
+    "flying saucer",
+    "lighthouse"
 ]
 
 for groupName in names:
