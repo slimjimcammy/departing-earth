@@ -1,0 +1,33 @@
+@keyframes tunnel {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.WormholeContainer {
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Hide overflow */
+    background-color: black; /* Background color of the wormhole */
+}
+
+.Wormhole {
+    width: 50vh; /* Width of the wormhole */
+    height: 50vh; /* Height of the wormhole */
+    /* background: radial-gradient(circle, rgba(0, 0, 255, 0.7), rgba(0, 0, 255, 0.1));  */
+    border-radius: 50%;
+    animation: tunnel 4s linear infinite; /* Infinite traveling effect */
+    box-shadow: 0 0 30px rgba(0, 0, 255, 0.8), 0 0 60px rgba(0, 0, 255, 0.5); /* Glowing effect */
+}

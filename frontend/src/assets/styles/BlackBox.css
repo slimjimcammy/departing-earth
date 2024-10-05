@@ -1,0 +1,40 @@
+.BlackBoxMainContainer {
+    margin: 0;
+    padding: 30px;
+    height: 85vh;
+    width: 35%;
+    background-color: rgb(65, 65, 65);
+    color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+}
+
+.BlackBoxMainContainer h1 {
+    font-size: 70px;    
+    font-weight: 700;
+    /* animation: fadeIn 5s forwards; */
+}
+
+.BlackBoxMainContainer h2 {
+    font-size: 60px;
+    font-weight: 700;
+    color: red;
+    filter: drop-shadow(0 0 10px red);
+    animation: fadeIn 5s forwards;
+}
+
+.BlackBoxMainContainer p {
+    padding-top: 50px; 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start from fully transparent */
+    }
+    to {
+        opacity: 1; /* End at fully opaque */
+    }
+}

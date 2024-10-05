@@ -1,0 +1,37 @@
+/* Apply the font to your body or specific elements */
+.ExoButtons {
+  font-family: 'SixtyFour Convergence', sans-serif;
+}
+
+
+/* Hide spinner in Chrome, Safari, Edge */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  /* Remove the default appearance */
+  margin: 0;
+  /* Reset margin */
+}
+
+/* Hide spinner in Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+  /* Set appearance to textfield */
+}
+
+.Buttons {
+  width: 20%;
+  height: 10vh;
+  background-color: #FFD700;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 4rem;
+  font-family: 'SixtyFour Convergence', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #FFD700;
+}
