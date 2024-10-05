@@ -1,5 +1,7 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 import requests
+from story import guessConstellation, makeStory
+from PIL import Image
 
 app = Flask(__name__)
 
@@ -20,5 +22,16 @@ def getStarData():
     except requests.exceptions.RequestException as e:
         return jsonify({"error": str(e)})
 
+@app.route("/guess", methods=["POST"])
+def getConstellationGuess():
+    # expects the image
+    imageFile = request.form['filename']
+    publicURL = uploadToFirebase(bucket, imageFile)
+    return guessConstellation(imageURL)
 
-
+@app.route("/story", methods=["POST"])
+def getStory():
+    print("in story")
+    guess = request.args.get('guess')
+    print(guess)
+    return makeStory(guess)
