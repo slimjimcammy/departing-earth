@@ -44,12 +44,12 @@ const ExploreExoPlanet = () => {
 
   return (
     <div className="ExoButtons">
-      <form onSubmit={handleSubmit}>
+      <form className="ExoForm" onSubmit={handleSubmit}>
         <input
           type="number"
           value={inputNumber}
           onChange={handleInputChange}
-          placeholder="Enter a number (1-5005)"
+          placeholder="Enter a num (1-5005)"
         />
         <button type="submit">Submit</button>
       </form>

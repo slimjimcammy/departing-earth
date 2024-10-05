@@ -10,6 +10,7 @@
     flex-direction: column;
     text-align: center;
     z-index: 10;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
 }
 
 .BlackBoxMainContainer h1 {
@@ -38,3 +39,53 @@
         opacity: 1; /* End at fully opaque */
     }
 }
+
+.ExploreButtonWrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    height: 100vh; /* Adjust the height to accommodate the rocket animation */
+    /* overflow: hidden; Prevents the page from expanding when the rocket moves */
+}
+
+.ExploreButton {
+    background-color: #1E3A8A;
+    cursor: pointer;
+    color: white;
+}
+
+.ExploreButton:hover {
+    background-color: #8da8f4; /* Complementary color */
+  }
+  
+  .ExploreButton::before {
+    content: '🚀';
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+  
+  .ExploreButton:hover::before {
+    opacity: 1;
+    animation: rocketFly 1s ease-out forwards;
+  }
+  
+  @keyframes rocketFly {
+    0% {
+      bottom: 180px;
+      opacity: 0;
+    }
+    50% {
+      bottom: 240px;
+      opacity: 1;
+    }
+    100% {
+      bottom: 300px;
+      opacity: 0;
+    }
+  }
