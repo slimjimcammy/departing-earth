@@ -17,7 +17,7 @@ const Home = () => {
             <div className={isBlur ? "BlurredImage" : "notBlur"}></div>
             <div className='HomePage'>
                 <BlackBox title="WELCOME TO" planetname="EARTH"
-                    maintext="SUCKIN CRAZY ON BLACK STROKES" blur={isBlur} changeBlur={changeBlur} />
+                    maintext="Bein really nice fellas" blur={isBlur} changeBlur={changeBlur} />
             </div>
         </>
     );
