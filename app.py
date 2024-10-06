@@ -60,13 +60,24 @@ def getConstellationGuess():
 def changeParams():
     params = request.get_json()
     coords = []
-    for param in params:
-        ra_e = param.get('ra_e')
-        dec_e = param.get('dec_e')
-        dist_e = param.get('dist_e')
-        ra_s = param.get('ra_s')
-        dec_s = param.get('dec_s')
-        dist_s = param.get('dist_s')
+    # {
+    #     planet: {
+    #         ra_e: 
+    #     }
+    #     stars: [
+    #         {
+    #             ra_s
+    #         },
+
+    #     ]
+    # }
+    ra_e = planet.get('ra_e')
+    dec_e = planet.get('dec_e')
+    dist_e = planet.get('dist_e')
+    for star in params.stars:
+        ra_s = star.get('ra_s')
+        dec_s = star.get('dec_s')
+        dist_s = star.get('dist_s')
         currCoordinates = transformerstar(ra_e, dec_e, dist_e, 
                                           ra_s, dec_s, dist_s)
         coords.append(currCoordinates)
