@@ -41,7 +41,7 @@ button:hover {
   padding: 20px; /* Add some padding inside the form */
   border-radius: 10px; /* Optional: make the corners rounded */
   width: 400px; /* Set the width of the form */
-  margin: 20px auto; /* Center the form horizontally */
+  margin: 7px auto; /* Center the form horizontally */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 

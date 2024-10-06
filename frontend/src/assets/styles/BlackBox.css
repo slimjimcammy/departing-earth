@@ -54,10 +54,14 @@
 }
 
 .ExploreButton {
-    background-color: #1E3A8A;
-    cursor: pointer;
-    color: white;
+  height: 6vh;
+  background-color: #1E3A8A;
+  cursor: pointer;
+  color: white;
+  text-align: center;
+  font-size: 2rem;
 }
+
 
 .ExploreButton:hover {
     background-color: #8da8f4; /* Complementary color */
@@ -81,15 +85,15 @@
   
   @keyframes rocketFly {
     0% {
-      bottom: 180px;
+      bottom: 280px;
       opacity: 0;
     }
     50% {
-      bottom: 240px;
+      bottom: 330px;
       opacity: 1;
     }
     100% {
-      bottom: 300px;
+      bottom: 360px;
       opacity: 0;
     }
   }
