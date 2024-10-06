@@ -19,18 +19,16 @@ def makeStory(guess):
     from groq import Groq
     client = Groq(api_key="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")
     chat_completion = client.chat.completions.create(
-    messages=[
-        {
-            "role": "user",
-            "content": f"Imagine you are a kid with a fantastical imagination. You look up into the night sky and see a universe of stars. Looking up, you see a cluster of stars that looks like a {guess}. Generate a magical, and mythological backstory behind the constellation and what the meaning of it is. Make sure to include {guess} and only generate the story, no other words. Make the story fit within 600 characters with no incomplete sentences.",
-        }
-    ], 
-    model="llama3-8b-8192",
+        messages=[
+            {
+                "role": "user",
+                "content": f"Imagine you are a kid with a fantastical imagination. You look up into the night sky and see a universe of stars. Looking up, you see a cluster of stars that looks like a {guess}. Generate a magical, and mythological backstory behind the constellation and what the meaning of it is. Make sure to include {guess} and only generate the story, no other words. Make the story fit within 600 characters with no incomplete sentences.",
+            }
+        ], 
+        model="llama3-8b-8192",
     )
 
     story = chat_completion.choices[0].message.content
-
-    print(story)
 
     return story
 

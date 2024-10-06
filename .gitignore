@@ -3,3 +3,5 @@ env
 model/gifs
 model/.quickdrawcache
 *images/
+*.venv
+*.json

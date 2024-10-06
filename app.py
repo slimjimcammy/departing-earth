@@ -35,14 +35,7 @@ def getStarData():
 
 @app.route("/guess", methods=["POST"])
 def getConstellationGuess():
-    # expects the image
-    imageFile = request.form['filename']
-    publicURL = uploadToFirebase(bucket, imageFile)
-    return guessConstellation(imageURL)
-
-@app.route("/story", methods=["POST"])
-def getStory():
-    print("in story")
-    guess = request.args.get('guess')
-    print(guess)
+    payload = request.get_json()
+    guess = guessConstellation(payload)
     return makeStory(guess)
+
