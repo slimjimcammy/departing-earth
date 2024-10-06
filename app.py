@@ -1,13 +1,11 @@
 from flask import Flask, jsonify, request
+import json
 import requests
 from story import guessConstellation, makeStory
+from transformations import transformerstar
 from PIL import Image
 
 app = Flask(__name__)
-
-@app.route("/test")
-def test():
-    return "<h1>Test successful!</h1>"
 
 @app.route("/planetdata", methods=["GET"])
 def getPlanetData():
@@ -38,4 +36,22 @@ def getConstellationGuess():
     payload = request.get_json()
     guess = guessConstellation(payload)
     return makeStory(guess)
+
+@app.route("/transform", methods=["POST"])
+def changeParams():
+    params = request.get_json()
+    coords = []
+    for param in params:
+        ra_e = param.get('ra_e')
+        dec_e = param.get('dec_e')
+        dist_e = param.get('dist_e')
+        ra_s = param.get('ra_s')
+        dec_s = param.get('dec_s')
+        dist_s = param.get('dist_s')
+        currCoordinates = transformerstar(ra_e, dec_e, dist_e, 
+                                          ra_s, dec_s, dist_s)
+        coords.append(currCoordinates)
+    
+    return json.dumps(coords)
+    
 
