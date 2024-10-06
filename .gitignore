@@ -1,4 +1,5 @@
-backend/env
+env
 *__pycache__
-backend/model/gifs
-backend/model/.quickdrawcache
+model/gifs
+model/.quickdrawcache
+*images/
