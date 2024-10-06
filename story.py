@@ -1,5 +1,3 @@
-
-
 def guessConstellation(imageURL):
     from inference_sdk import InferenceHTTPClient
     from PIL import Image
