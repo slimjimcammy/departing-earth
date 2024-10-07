@@ -9,7 +9,7 @@ def guessConstellation(image_file):
 
     image = Image.open(image_file)
     resizedImage = image.resize((640, 640))
-    resizedPath = f'resized.jpeg'
+    resizedPath = f'resize.jpeg'
     resizedImage.save(resizedPath)
 
     result = CLIENT.infer(resizedPath, model_id="departing.earth-dqxez/5")
