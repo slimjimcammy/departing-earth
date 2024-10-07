@@ -51,8 +51,8 @@ def getStarData():
 @app.route("/guess", methods=["POST"])
 @cross_origin()
 def getConstellationGuess():
-    payload = request.get_json()
-    guess = guessConstellation(payload)
+    image_file = request.files['doodle'] 
+    guess = guessConstellation(image_file)
     return makeStory(guess)
 
 @app.route("/transform", methods=["POST"])

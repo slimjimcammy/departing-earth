@@ -1,17 +1,20 @@
-def guessConstellation(imageURL):
+def guessConstellation(image_file):
     from inference_sdk import InferenceHTTPClient
     from PIL import Image
+    import os
     CLIENT = InferenceHTTPClient(
         api_url="https://detect.roboflow.com",
         api_key="ghzpyenPcNlDg1p1yWq9"
     )
 
-    image = Image.open(imageURL)
+    image = Image.open(image_file)
     resizedImage = image.resize((640, 640))
-    resizedPath = f'{imageURL}-resized.jpeg'
+    resizedPath = f'{image_file}-resized.jpeg'
     resizedImage.save(resizedPath)
 
     result = CLIENT.infer(resizedPath, model_id="departing.earth-dqxez/5")
+
+    os.remove(resizedPath)
 
     return result['top']
 
